@@ -2,10 +2,13 @@ import json
 import subprocess
 from argparse import ArgumentParser
 
+
 def get_free_space():
     return (
         int(
-            subprocess.check_output("df --output=avail / | tail -n 1", shell=True)
+            subprocess.check_output(
+                "df --output=avail / | tail -n 1", shell=True
+            )
             .decode()
             .strip()
         )
@@ -14,9 +17,15 @@ def get_free_space():
     )
 
 
-def send_alert(webhook_url:str, environment: str, free_space: float, message_type: str, color: int):
+def send_alert(
+    webhook_url: str,
+    environment: str,
+    free_space: float,
+    message_type: str,
+    color: int,
+):
     alert = {
-        "username": "DUB",
+        "username": "Disk Cleanup",
         "embeds": [
             {
                 "title": f"{message_type}: {environment}",
@@ -37,7 +46,9 @@ def cleanup_disk():
 
 
 def main():
-    parser = ArgumentParser(description="A cli utility that sends low disk warning notifications and cleanups.")
+    parser = ArgumentParser(
+        description="A cli utility that sends low disk warning notifications and cleanups."
+    )
     parser.add_argument(
         "--discord-webhook",
         type=str,
@@ -85,6 +96,7 @@ def main():
             "Free Space Update",
             65280,
         )
+
 
 if __name__ == "__main__":
     main()

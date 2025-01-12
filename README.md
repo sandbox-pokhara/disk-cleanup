@@ -1,6 +1,6 @@
-# DUB
+# Disk-Cleanup
 
-Dub monitors disk usage, sends alerts to a Discord webhook when the available disk space falls below a specified threshold, and performs cleanup operations to free up space.
+Disk-Cleanup monitors disk usage, sends alerts to a Discord webhook when the available disk space falls below a specified threshold, and performs cleanup operations to free up space.
 
 ## Features
 
@@ -21,7 +21,7 @@ Dub monitors disk usage, sends alerts to a Discord webhook when the available di
 You can install the package via pip:
 
 ```
-pip install dub
+pip install disk-cleanup
 ```
 
 ## Usage
@@ -39,13 +39,13 @@ Run the script with the following arguments:
 ### Example Command
 
 ```bash
-dub --discord-webhook https://discord.com/api/webhooks/XXX --threshold 1G --environment production
+disk-cleanup --discord-webhook https://discord.com/api/webhooks/XXX --threshold 1G --environment production
 ```
 
 or add to crontab
 
 ```bash
-* * * * * dub --discord-webhook https://discord.com/api/webhooks/XXX --threshold 1G --environment production
+* * * * * disk-cleanup --discord-webhook https://discord.com/api/webhooks/XXX --threshold 1G --environment production
 ```
 
 ### What It Does
@@ -64,7 +64,7 @@ When disk space is low:
 
 ```json
 {
-  "username": "DUB",
+  "username": " Disk Cleanup",
   "embeds": [
     {
       "title": "Low Disk Space Warning: production",
@@ -79,7 +79,7 @@ After cleanup:
 
 ```json
 {
-  "username": "DUB",
+  "username": " Disk Cleanup",
   "embeds": [
     {
       "title": "Free Space Update: production",

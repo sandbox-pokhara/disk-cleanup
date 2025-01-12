@@ -3,7 +3,7 @@ requires = ["setuptools>=70.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dub"
+name = "disk-cleanup"
 requires-python = ">=3"
 authors = [{ name = "Pradish Bijukchhe", email = "pradish@sandbox.com.np" }]
 description = "A cli utility that sends low disk warning notifications and cleanups."
@@ -15,20 +15,20 @@ dynamic = ["version", "dependencies"]
 
 
 [project.urls]
-Homepage = "https://github.com/sandbox-pokhara/dub"
-Issues = "https://github.com/sandbox-pokhara/dub/issues"
+Homepage = "https://github.com/sandbox-pokhara/disk-cleanup"
+Issues = "https://github.com/sandbox-pokhara/disk-cleanup/issues"
 
 [project.scripts]
-dub = "dub.__main__:main"
+disk-cleanup = "disk-cleanup.__main__:main"
 
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.package-dir]
-"dub" = "dub"
+"disk-cleanup" = "disk-cleanup"
 
 [tool.setuptools.dynamic]
-version = { attr = "dub.__version__" }
+version = { attr = "disk-cleanup.__version__" }
 dependencies = { file = "requirements.txt" }
 
 [tool.isort]
@@ -40,5 +40,5 @@ line-length = 79
 preview = true
 
 [tool.pyright]
-include = ["dub", "test.py"]
+include = ["disk-cleanup", "test.py"]
 typeCheckingMode = "strict"

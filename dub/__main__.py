@@ -37,7 +37,7 @@ def cleanup_disk():
 
 
 def main():
-    parser = ArgumentParser(description="A cli utility that sends low disk warning noftications and cleanups.")
+    parser = ArgumentParser(description="A cli utility that sends low disk warning notifications and cleanups.")
     parser.add_argument(
         "--discord-webhook",
         type=str,

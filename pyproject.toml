@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "dub"
 requires-python = ">=3"
 authors = [{ name = "Pradish Bijukchhe", email = "pradish@sandbox.com.np" }]
-description = "A cli utility that sends low disk warning noftications and cleanups."
+description = "A cli utility that sends low disk warning notifications and cleanups."
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = []

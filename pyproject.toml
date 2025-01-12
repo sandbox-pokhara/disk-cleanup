@@ -19,16 +19,16 @@ Homepage = "https://github.com/sandbox-pokhara/disk-cleanup"
 Issues = "https://github.com/sandbox-pokhara/disk-cleanup/issues"
 
 [project.scripts]
-disk-cleanup = "disk-cleanup.__main__:main"
+disk-cleanup = "disk_cleanup.__main__:main"
 
 [tool.setuptools]
 include-package-data = true
 
 [tool.setuptools.package-dir]
-"disk-cleanup" = "disk-cleanup"
+"disk_cleanup" = "disk_cleanup"
 
 [tool.setuptools.dynamic]
-version = { attr = "disk-cleanup.__version__" }
+version = { attr = "disk_cleanup.__version__" }
 dependencies = { file = "requirements.txt" }
 
 [tool.isort]
@@ -40,5 +40,5 @@ line-length = 79
 preview = true
 
 [tool.pyright]
-include = ["disk-cleanup", "test.py"]
+include = ["disk_cleanup", "test.py"]
 typeCheckingMode = "strict"
